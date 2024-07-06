@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://du83hl3nb76ne"]
+
+[ext_resource type="SpriteFrames" uid="uid://duxs75sh6vjbl" path="res://Assets/characters/MoleFrames.tres" id="1_oawpu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivy57"]
+size = Vector2(154, 123)
+
+[node name="Mole" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_oawpu")
+animation = &"delay"
+frame = 1
+frame_progress = 0.216545
+
+[node name="Collision" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+position = Vector2(-1, 3.5)
+shape = SubResource("RectangleShape2D_ivy57")
