@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://plloyblejd7d"]
+
+[ext_resource type="PackedScene" uid="uid://dowrskhsq1smm" path="res://Scenes/mole_scene.tscn" id="1_65vpw"]
+
+[node name="Main" type="Node2D"]
+
+[node name="MoleScene" parent="." instance=ExtResource("1_65vpw")]
+position = Vector2(171, 163)

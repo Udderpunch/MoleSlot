@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dowrskhsq1smm"]
+
+[ext_resource type="Script" path="res://Src/MolePickable.cs" id="1_l1lgp"]
+[ext_resource type="SpriteFrames" uid="uid://cx81ke1oy75dc" path="res://Components/Mole/MoleSpriteFrames.tres" id="1_wphmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hf2jl"]
+size = Vector2(201, 159)
+
+[node name="MoleScene" type="Node2D"]
+script = ExtResource("1_l1lgp")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -66)
+sprite_frames = ExtResource("1_wphmk")
+animation = &"hit"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -29.5)
+shape = SubResource("RectangleShape2D_hf2jl")
+
+[connection signal="input_event" from="Area2D" to="." method="OnAreaInputEventEntered"]
